@@ -1,0 +1,18 @@
+.webpage{
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background:linear-gradient(to bottom, #651D1C, #170707);
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background:#2E0D0D;
+      }
+
+        font-family: "Bebas Neue";    
+    overflow-x: hidden;
+}

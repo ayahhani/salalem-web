@@ -1,0 +1,45 @@
+.compose-box{
+    @media screen and (max-width:650px) {
+        margin:20px;
+        min-height: 0px;
+    }
+    margin:40px;
+    min-height: 300px;
+    .box-contents{
+        @media screen and (max-width:650px) {
+            padding:30px
+        }
+        padding:50px;
+        .bold-text{
+            font-family: "Bebas Neue",sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            min-height: 90px;
+        }
+
+        .small-text{
+            font-family: "Bebas Neue",sans-serif;
+            font-size: 24px;
+            font-weight: 700;}
+
+        .smaller-text{
+            font-family: "Bebas Neue Regular",sans-serif;
+            min-height: 40px;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        .button-compose{
+            color:#C20231;
+            font-family: "Bebas Neue",sans-serif;
+            font-size: 18px;
+            font-weight: bolder;
+
+            span{
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

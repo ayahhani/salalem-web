@@ -1,0 +1,60 @@
+.top-ribbon{
+  
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo{
+        @media screen and (max-width:650px) {
+            margin-left:0px
+        }
+        margin-left: 100px;
+        max-width: 45%;
+        .logo-img{ 
+            img{
+                @media screen and (max-width:650px) {
+                    width:125px;
+                }
+                width:20%;
+            }
+        }
+    }
+
+    .profile{
+        @media screen and (max-width:650px) {
+            min-width: 0px;
+
+        }
+        display: flex;
+        flex-direction: row;
+        min-width: 200px;
+        line-height: 2;
+        font-family: "Bebas Neue Regular",sans-serif;
+        font-size: 23px;
+        font-weight: bolder;
+        .user{
+            @media screen and (max-width:650px) {
+                display: none;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .profile-icon{
+            width: min-content;
+            min-width: fit-content;
+            img{
+                @media screen and (max-width:650px) {
+                    width:70px;
+                    padding-top:0px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                padding-top: 14px;
+                width:17%;
+            }
+        }
+        }
+}

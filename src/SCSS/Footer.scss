@@ -1,0 +1,106 @@
+.footer{
+    @media screen and (max-width:650px) {
+        padding:0px;
+    }
+    background:#1b191a;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding:16px;
+    
+    .navlist-area{
+        min-width: 360px;
+        max-width: 300px;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        @media screen and (max-width:650px) {
+            padding:0px;
+            padding-top: 20px;
+            flex-direction: column;
+            max-width: 0px;
+            margin: 0px;
+        }
+
+        .navlist{
+            @media screen and (max-width:650px) {
+                display: none;
+            }
+            font-family: "Bebas Neue",sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+
+            margin:25px;
+            .nav-item{
+                &:hover{
+                    cursor: pointer;
+                }
+                margin:12px;
+            }
+        }
+        .logo{
+            text-align: center;
+            img{
+                width: 45%;
+            }
+        }
+    }
+
+    .copyright{
+        font-family: "Bebas Neue Light",sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 70px;
+        @media screen and (max-width:650px) {
+            margin:0px;
+            flex-direction: column;
+        }
+       
+        .links{
+            @media screen and (max-width:650px) {
+                flex-direction: column;
+                text-align: center;
+                min-height: 300px;
+            }
+            display: flex;
+            flex-direction: row;
+            .link-item{
+                span{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                padding:16px;
+            }
+        }
+
+        .copyright-year{
+            @media screen and (max-width:650px) {
+                text-align: center;
+                margin:auto
+            }
+            padding: 8px;
+            display: flex;
+            flex-direction: row;
+            .year{
+                min-width: 25px;
+                margin: auto;
+            }
+            .name{
+                margin: auto;
+            }
+            .img{
+                min-width: 18px;
+                img{
+                    @media screen and (max-width:650px) {
+                        margin:0px;
+                    }
+                     width: 13px;
+                     margin-top: 9px;
+                }  
+            }
+        }
+    }
+}
