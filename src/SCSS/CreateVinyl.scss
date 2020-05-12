@@ -1,0 +1,13 @@
+.myform{
+    color:white;
+    background:#8D0E1F;
+    form{
+        display: flex;
+    flex-direction: column;
+    padding:20px;
+
+    button{
+        margin-top: 30px;
+    }
+    }
+}

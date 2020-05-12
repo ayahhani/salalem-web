@@ -51,6 +51,7 @@ class MainContents extends React.Component {
 render(){
   return (
     <div className="box">
+      <div className="background-second-color"></div>
       <div className="left-section">
         <div className="items">
           <div className="bold-text">AMP UP THOSE DBS</div>
