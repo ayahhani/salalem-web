@@ -76,6 +76,7 @@
 
             .grid-info{
                 visibility: hidden;
+
                     }
 
             @media screen and (max-width:650px) {
@@ -90,8 +91,25 @@
 
             .grid-item {
                 
+                .dlt{    position: relative;
+                    top: 40px;
+                    visibility: none;
+                    &:hover{
+                        visibility: visible;
+                    }
+                    img{
+                        &:hover{
+                            cursor: pointer;;
+                            visibility: visible;
+                        }
+                     width:40px;
+                    }
+                 }
+
                 &:hover{
-                    .grid-info{visibility: visible;}
+                    .grid-info{
+                    height: 80px;    
+                    visibility: visible;}
                 visibility: visible;
                  background-color: rgba(255, 255, 255, 0.4);
                  transition: all 0.4s;

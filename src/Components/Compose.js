@@ -39,7 +39,6 @@ render(){
 {this.state.open &&
    <div className="thismodal">
    <CreateVinyl/>
-   {/* <div className="exitbtn"><span  onClick={this.toggleContact}>EXIT</span></div> */}
    <div className="modalshade" onClick={this.close}></div>
  
 </div>
