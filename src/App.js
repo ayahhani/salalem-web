@@ -1,7 +1,6 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import Vinyls from './Components/Vinyls';
 import TopRibbon from './Components/TopRibbon';
 import MainContents from './Components/MainContents';
 import Compose from './Components/Compose';
@@ -18,7 +17,6 @@ const client = new ApolloClient({
 const App = () => (
   <ApolloProvider client={client}>
     <div className="webpage">
-      {/* <Vinyls/> */}
       <TopRibbon/>
       <MainContents/>
       <Compose/>

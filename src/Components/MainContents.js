@@ -4,36 +4,44 @@ import hitIt from '../Assets/hitIt.png';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import Vinyl from './Vinyl';
+import wkd from '../Assets/wkd.jpg';
+import blnd from '../Assets/blnd.jpg';
+import wtt from '../Assets/wtt.jpg';
+import freud from '../Assets/freud.jpg';
+import sc from '../Assets/sc.jpg';
+import ph from '../Assets/ph.jpg';
+import it from '../Assets/it.jpg';
+import taro from '../Assets/taro.jpg';
+import angl from '../Assets/angl.jpg';
+import bbb from '../Assets/bbb.jpg';
+import feng from '../Assets/feng.jpg';
 
-const CREATE_USER = gql`
-mutation createUser ($name: String!, $lastName: String!){
-  createUser (name: $name, lastName: $lastName){
-    id
-    name
-    lastName
-  }
-}
-`;
+
+const AlbumCover = [
+  wkd,blnd,wtt,freud,sc,ph,it,taro,angl,bbb,feng
+];
+
 
 const Vinyls = () => (
   <Query query={gql`
-      {
+      {     
           vinyls {
               id
               songName
               albumName
               artist
-          }
+              }
+          
       }
   `}
   >
-      {({loading, error, data, q}) => {
+      {({loading, error, data}) => {
           if (loading) return <p>Loading ...</p>;
           if (error) return <p>Error :(</p>;
           
             return (
               <div className="grid-container">
-              {data.vinyls.map(v => <Vinyl data={v} songName={v.songName} artist={v.artist} albumName={v.albumName}/>)}
+                {data.vinyls.map(v => <Vinyl data={v} songName={v.songName} artist={v.artist} albumName={v.albumName} photo={v}/>)}
               </div>
             )
       }}
@@ -44,9 +52,25 @@ const Vinyls = () => (
 
 class MainContents extends React.Component {
   constructor() {
-      super();
-      this.state = {}
-      }
+    super();
+    this.state = {
+      };
+
+
+     this.toggleContact = this.toggleContact.bind(this);
+     this.close = this.close.bind(this);
+   }
+
+
+   toggleContact() {
+         this.setState(prevState => ({
+           open: !prevState.open
+      }))}
+
+      close() {
+            this.setState({
+              open: !this.state.open
+         })}
 
 render(){
   return (
@@ -66,6 +90,7 @@ render(){
       <div className="right-section">
         <div class="grid-item">
           <div>
+          
           <Vinyls/>
           </div>       
         </div>
